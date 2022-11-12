@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+      }
+      input {
+        border: 0;
+        border-bottom: 1px solid gray;
+      }
+    </style>
+    <title>Formulário</title>
+  </head>
+  <body>
+    <form action="" method="get">
+      <div class="form_campo">
+        <label for="form_nome"><strong>Nome:</strong></label>
+        <input type="text" name="nome" id="form_nome" />
+      </div>
+      <div class="form_campo">
+        <label for="form_idade"><strong>Idade:</strong></label>
+        <input type="number" name="idade" id="form_idade" />
+      </div>
+      <div class="form_campo">
+        <label for="form_profissao"><strong>Profissão:</strong></label>
+        <input type="text" name="profissao" id="form_profissao" />
+      </div>
+      <div class="form_campo">
+        <label for="form_email"><strong>Email:</strong></label>
+        <input type="email" name="email" id="form_email" />
+      </div>
+      <div class="form_campo">
+        <label for="form_tel"><strong>Telefone:</strong></label>
+        <input type="tel" name="tel" id="form_tel" />
+      </div>
+      <div class="form_campo">
+        <label for="form_dataPreenchimento"
+          ><strong>Data de Preenchimento:</strong></label
+        >
+        <input
+          type="date"
+          name="dataDePreenchimento"
+          id="form_dataPreenchimento"
+          disabled
+        />
+      </div>
+    </form>
+
+    <script>
+      var today = new Date()
+      document.getElementById('form_dataPreenchimento').valueAsDate = today
+    </script>
+  </body>
+</html>
